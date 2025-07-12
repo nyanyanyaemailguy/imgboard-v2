@@ -89,11 +89,6 @@ if (count($filtered_threads) !== count($threads)) {
     </div>
 
     <!-- 返信一覧 -->
-    <table bgcolor="#f0f0f0" style="border: none; margin-left: 10px; margin-top: 10px;">
-      <tr>
-        <td><strong>(<?= htmlspecialchars($thread['title']) ?>)</strong><br> <?= htmlspecialchars($thread['name']) ?> - <?= htmlspecialchars($thread['date']) ?></td>
-      </tr>
-    </table>
 
     <?php foreach($thread['replies'] as $reply): ?>
       <table bgcolor="#f0f0f0" style="border: none; margin-left: 20px; margin-top: 8px; margin-bottom: 8px; width: 95%;">
