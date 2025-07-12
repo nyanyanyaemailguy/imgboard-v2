@@ -62,7 +62,7 @@ if (count($filtered_threads) !== count($threads)) {
   title: <input type="text" name="title"><input type="submit" value="Post"><br>
   comment: <textarea name="body" rows="4" cols="40"></textarea><br>
   image URL: <input type="text" name="image"><br>
-  no image: <input type="checkbox" name="noimage" value="1"><br>
+  no image?: <input type="checkbox" name="noimage" value="1"><br>
 </form>
     </td>
    </tr>
@@ -75,7 +75,6 @@ if (count($filtered_threads) !== count($threads)) {
 <!-- スレ一覧 -->
 <?php foreach(array_reverse($threads) as $thread): ?>
   <div>
-    <hr>
     <div style="display: flex;">
       <?php if (empty($thread['noimage']) && !empty($thread['image'])): ?>
         <img src="<?= htmlspecialchars($thread['image']) ?>" alt="画像" width="100" style="margin-right:10px;">
